@@ -3,4 +3,7 @@ for index,element in enumerate(spam):
     if index + 1 == len(spam):
         print('and',element)
     else:
-        print(element,end = ' ')
+        if index + 1== len(spam) - 1:
+            print(element,end = ' ')
+        else:
+            print(element,end = ',')
