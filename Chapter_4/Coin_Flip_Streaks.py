@@ -1,6 +1,5 @@
 import random
 
-numberofstreaks = 0
 final = 0
 for experimentNumber in range(10000):
     list_ = []
