@@ -1,10 +1,14 @@
 import re
 
-datecheck = re.compile(r'([0-9]{2})/([0-9]{2})/([0-9]{4})')
+datecheck = re.compile(r'([0-9]{2})/([0-9]{2})/([1-9][0-9]{3})')
 something = datecheck.search("asdasdsada ssddafg 29/02/2024 weasdadd wqeqweqe qwqweqewqweqw eq")
-day = something.group(1)
-month = something.group(2)
-year = something.group(3)
+try:
+    day = something.group(1)
+    month = something.group(2)
+    year = something.group(3)
+except AttributeError:
+    print('Not found')
+    exit()
 intday = int(day)
 intmonth = int(month)
 intyear = int(year)

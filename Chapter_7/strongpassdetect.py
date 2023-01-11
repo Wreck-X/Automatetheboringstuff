@@ -3,8 +3,8 @@ import re
 
 def strongornot(password):
     stronk = re.compile(r'\w{8,}')
-    upperstronk = re.compile(r'.*[A-Z].*')
-    lowerstronk = re.compile(r'.*[a-z].*')
+    upperstronk = re.compile(r'[A-Z]')
+    lowerstronk = re.compile(r'[a-z]')
     num = re.compile(r'\d+')
     check1 = stronk.search(password)
     check2 = upperstronk.search(password)
