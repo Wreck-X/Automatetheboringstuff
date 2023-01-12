@@ -1,6 +1,7 @@
 import os
 import re
-os.chdir('/home/wreck/Desktop/Automatetheboringstuff/chapter_9/Regex_search')
+from pathlib import Path
+os.chdir(Path.home()/'Desktop/Automatetheboringstuff/chapter_9/Regex_search')
 
 def regexSearch(regex):
     directory = os.listdir()
